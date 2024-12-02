@@ -38,7 +38,7 @@ class formController extends Controller
 
 public function from_validation(Request $request){
     $request->validate([
-        'name'=>'required',
+        'name' => 'required|max:5',
         'email'=>'required',
         'phone'=>'required',
         'skil'=>'required',

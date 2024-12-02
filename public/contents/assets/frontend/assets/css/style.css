@@ -38,3 +38,8 @@ body{
     opacity: 0;
     transition: opacity 1s ease-out;
 }
+
+.input_error{
+    border: 1px solid red;
+    color: red;
+}

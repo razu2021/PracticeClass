@@ -12,13 +12,14 @@
                 @csrf
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">User Name</label>
-                  <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="name" value="{{old('name')}}">
+                  <input type="text" name="name" class="form-control {{$errors->first('name')? 'input_error':''}} " id="exampleInputEmail1" aria-describedby="name" value="{{old('name')}}"
+                  >
                   <div id="name" class="form-text text-danger">@error('name'){{$message}} @enderror</div>
                 </div>
                 
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">User Email</label>
-                  <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{old('email')}}">
+                  <input type="email" name="email" class="form-control {{$errors->first('email')? 'input_error':''}}" id="exampleInputEmail1"  value="{{old('email')}}">
                   <div id="name" class="form-text text-danger">@error('email'){{$message}} @enderror</div>
                 </div>
                 <div class="mb-3">
