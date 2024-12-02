@@ -33,6 +33,46 @@ class formController extends Controller
         echo "<br>";
 
     }
+// basic form end here 
+
+
+public function from_validation(Request $request){
+    $request->validate([
+        'name'=>'required',
+        'email'=>'required',
+        'phone'=>'required',
+        'skil'=>'required',
+        'gender'=>'required',
+        'country'=>'required',
+        'age'=>'required',
+        'condition'=>'required',
+    ]);
+
+    $info = [
+    'name' =>  $request->name ,
+    'email' =>  $request->email ,
+    'phone' =>  $request->phone ,
+    'skil' =>  $request->skil ,
+    'gender' =>  $request->gender ,
+    'country' =>  $request->country ,
+    'age' =>  $request->age ,
+    'condition' =>  $request->condition ,
+    
+  
+    ];
+
+   return redirect()->back()->with('info',$info);
+
+// function end here 
+}
+
+
+
+
+
+
+
+
 
 
 

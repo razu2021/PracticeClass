@@ -56,6 +56,11 @@
 
                 <li> <a href="{{url('component')}}" class="nav-link link-body-emphasis"><svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg> Component  </a></li>
                 <li> <a href="{{url('basic')}}" class="nav-link link-body-emphasis"><svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg> Basic form  </a></li>
+                <li> 
+                  <a href="{{url('form-validation')}}" class="nav-link link-body-emphasis"><svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg> 
+                    Validate form 
+                </a>
+                </li>
 
                 </ul>
                 <hr>
