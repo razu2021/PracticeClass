@@ -61,8 +61,14 @@
                     Validate form 
                 </a>
                 </li>
-
+                <li> 
+                  <a href="{{route('student.index')}}" class="nav-link link-body-emphasis"><svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg> 
+                   Student 
+                </a>
+                </li>
+                 
                 </ul>
+
                 <hr>
                 <div class="dropdown">
                 <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\form;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
+use App\Rules\Uppercase;
 
 class formController extends Controller
 {
@@ -38,7 +39,7 @@ class formController extends Controller
 
 public function from_validation(Request $request){
     $request->validate([
-        'name' => 'required|max:5',
+        'name' => ['required', new Uppercase],
         'email'=>'required',
         'phone'=>'required',
         'skil'=>'required',
@@ -46,7 +47,11 @@ public function from_validation(Request $request){
         'country'=>'required',
         'age'=>'required',
         'condition'=>'required',
-    ]);
+    ],[
+        'name.required'=>'Name is Required ',
+        'name.Uppercase'=>'your name must be Uppercase '
+    ]
+    );
 
     $info = [
     'name' =>  $request->name ,
